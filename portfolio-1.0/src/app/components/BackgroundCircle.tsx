@@ -25,7 +25,7 @@ function BackgroundCircle({}: Props) {
 
         <div className='border border-[#27272a] h-[300px] w-[300px] absolute  rounded-full mt-52'></div>
 
-        <div className='border border-[#27272a] h-[500px] w-[500px] absolute  rounded-full mt-52'></div>
+        <div className='border border-[#27272a] h-[500px] w-[500px] absolute rounded-full mt-52'></div>
 
         <div className='border border-[#F7AB0A] h-[650px] w-[650px] absolute opacity-20 rounded-full mt-52'></div>
 
