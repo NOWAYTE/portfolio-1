@@ -1,8 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import React from 'react';
-import Link from 'next/link'
- // Import Link from react-scroll
+import { Link as ScrollLink } from 'react-scroll'; // Import Link from react-scroll
 import { SocialIcon } from 'react-social-icons';
 
 type Props = {}
@@ -27,7 +26,7 @@ export default function Header({}: Props) {
         className='flex flex-row items-center'
       >
         {/* Social Icons */}
-        <SocialIcon className="" url='https://github.com/NOWAYTE'
+        <SocialIcon url='https://github.com/NOWAYTE'
           fgColor='gray'
           bgColor='transparent'
         />
@@ -45,7 +44,7 @@ export default function Header({}: Props) {
         />
       </motion.div>
 
-      <Link href='#contact' >
+      <ScrollLink to="Contact" smooth={true} duration={1000}> {/* Use ScrollLink from react-scroll */}
         <motion.div
           initial={{
             x: 500,
@@ -69,7 +68,7 @@ export default function Header({}: Props) {
           />
           <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
         </motion.div>
-        </Link>
+      </ScrollLink>
     </header>
   );
 }
