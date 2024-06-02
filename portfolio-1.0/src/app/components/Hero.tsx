@@ -3,7 +3,7 @@ import React from 'react'
 import { Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter'
 import { motion } from 'framer-motion'
 import BackgroundCircle from './BackgroundCircle'
-import { Link } from 'react-router-dom';
+import Link from 'next/link'
 import About from './About'
 
 type Props = {}
@@ -32,16 +32,13 @@ function Hero({}: Props) {
               <Cursor cursorColor='#F7AB0A'/>
               </h1>   
               <div className='pt-5'>
-                <Link to='#About'>
+                <Link href='#About'>
                 <button className='heroButton'>About</button>
                 </Link>
-                <Link to='#About' >
-                <button className='heroButton'>Experience</button>
-                </Link>
-                <Link to='#About'>
+                <Link href='#Skills'>
                 <button className='heroButton'>Skills</button>
                 </Link>
-                <Link to='#About'>
+                <Link href='#Projects'>
                 <button className='heroButton'>Projects</button>
                 </Link>
               </div>

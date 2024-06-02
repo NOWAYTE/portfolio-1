@@ -1,11 +1,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 type Props = {}
 
 function Projects({}: Props) {
     const projects = [1, 2, 3, 4, 5]
     return (
+        <Link href="#Projects">
         <motion.div
         initial={{
             x: 200,
@@ -56,6 +58,7 @@ function Projects({}: Props) {
 
             </div>
         </motion.div>
+        </Link>
     )
 }
 

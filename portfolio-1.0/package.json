@@ -13,9 +13,12 @@
     "@react-three/drei": "^9.105.6",
     "@react-three/fiber": "^8.16.6",
     "@react-three/postprocessing": "^2.16.2",
+    "@sanity/client": "^6.19.1",
+    "@sanity/vision": "^3.44.0",
     "@splinetool/react-spline": "^2.2.6",
     "framer-motion": "^11.2.4",
     "next": "^14.2.3",
+    "next-sanity": "^9.3.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.51.5",
@@ -24,6 +27,8 @@
     "react-scroll": "^1.9.0",
     "react-simple-typewriter": "^5.0.1",
     "react-social-icons": "^6.16.0",
+    "sanity": "^3.44.0",
+    "styled-components": "^6.1.11",
     "three": "^0.164.1"
   },
   "devDependencies": {

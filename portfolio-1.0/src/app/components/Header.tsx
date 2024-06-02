@@ -1,7 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import React from 'react';
-import { Link as ScrollLink } from 'react-scroll'; // Import Link from react-scroll
+import Link from 'next/link' // Import Link from react-scroll
 import { SocialIcon } from 'react-social-icons';
 
 type Props = {}
@@ -44,7 +44,7 @@ export default function Header({}: Props) {
         />
       </motion.div>
 
-      <ScrollLink to="Contact" smooth={true} duration={1000}> {/* Use ScrollLink from react-scroll */}
+      <Link href="#Contact">
         <motion.div
           initial={{
             x: 500,
@@ -68,7 +68,7 @@ export default function Header({}: Props) {
           />
           <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>Get In Touch</p>
         </motion.div>
-      </ScrollLink>
+      </Link>
     </header>
   );
 }
