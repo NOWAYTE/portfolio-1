@@ -1,22 +1,22 @@
+import { client } from '../../sanity/lib/client';
+import { PageInfo } from './typings.d';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { groq } from 'next-sanity';
-import { skill } from './typings';
-import { client } from '../../sanity/lib/client';
 
 
 const query = groq`
-  *[_type == "skill"]
+  *[_type == "pageInfo"]
 `;
 
 type Data = {
-  skills: skill[];
+  PageInfo: PageInfo;
 };
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const skills: skill[] = await client.fetch(query);
+  const PageInfo: PageInfo = await client.fetch(query);
 
-  res.status(200).json({ skills });
+  res.status(200).json({ PageInfo });
 }
