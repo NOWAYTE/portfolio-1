@@ -3,10 +3,13 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link' // Import Link from react-scroll
 import { SocialIcon } from 'react-social-icons';
+import { Social } from '../../../pages/api/typings';
 
-type Props = {}
+type Props = {
+  socials: Social[];
+}
 
-export default function Header({}: Props) {
+export default function Header({ socials}: Props) {
   return (
     <header className='sticky top-0 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
       <motion.div

@@ -6,7 +6,9 @@ import BackgroundCircle from './BackgroundCircle'
 import Link from 'next/link'
 import About from './About'
 
-type Props = {}
+type Props = {
+  
+}
 
 function Hero({}: Props) {
     const [text, count ] = useTypewriter ({

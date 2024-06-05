@@ -1,22 +1,22 @@
-import { client } from '../../sanity/lib/client';
 import { PageInfo } from './typings.d';
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { groq } from 'next-sanity';
-
+import { client } from '../../sanity/lib/client';
 
 const query = groq`
-  *[_type == "pageInfo"]
+  *[_type == "pageInfo"] {
+
+  }
 `;
 
 type Data = {
-  PageInfo: PageInfo;
+    pageInfo: PageInfo;
 };
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const PageInfo: PageInfo = await client.fetch(query);
-
-  res.status(200).json({ PageInfo });
+  const pageInfo: PageInfo = await client.fetch(query);
+  res.status(200).json({ pageInfo });
 }
