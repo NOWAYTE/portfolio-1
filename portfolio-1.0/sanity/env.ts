@@ -13,11 +13,6 @@ export const projectId = assertValue(
 
 export const useCdn = false;
 
-export const sanityStudioBaseUrl = assertValue(
-  process.env.SANITY_STUDIO_PUBLIC_BASE_URL,
-  'Missing environment variable: SANITY_STUDIO_PUBLIC_BASE_URL'
-);
-
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
   if (v === undefined) {
     throw new Error(errorMessage);

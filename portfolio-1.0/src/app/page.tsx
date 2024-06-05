@@ -59,12 +59,12 @@ export default function Home() {
       </header>
 
       <BrowserRouter>
-        <Header />
+      <Header socials={ socials } />
       </BrowserRouter>
 
       <section id="Hero" className="snap-center">
         <BrowserRouter>
-          <Hero />
+          <Hero pageInfo={ pageInfo }/>
         </BrowserRouter>
       </section>
 

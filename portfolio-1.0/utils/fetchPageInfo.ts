@@ -1,9 +1,15 @@
-import { SanityClient } from 'next-sanity';
 import { PageInfo } from '../pages/api/typings';
 
-export const fetchPageInfo = async (): Promise<PageInfo> => {
-    const res = await fetch(`${process.env.SANITY_STUDIO_PUBLIC_BASE_URL}/api/getPageInfo`);
+export const fetchPageInfo = async (): Promise<PageInfo | null> => {
+  try {
+    const res = await fetch('/api/getPageInfo');
+    if (!res.ok) {
+      throw new Error('Failed to fetch page info');
+    }
     const data = await res.json();
-    const pageInfo: PageInfo = data.PageInfo;
-    return pageInfo;
+    return data.pageInfo;
+  } catch (error) {
+    console.error('Error fetching page info:', error);
+    return null;
+  }
 };

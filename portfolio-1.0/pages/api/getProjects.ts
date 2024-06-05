@@ -1,13 +1,11 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 import { groq } from 'next-sanity';
 import { Project } from './typings';
 import { client } from '../../sanity/lib/client';
 
+
 const query = groq`
-  *[_type == "project"] {
-    ...,
-    technologies[]->
-  }
+  *[_type == "project"]
 `;
 
 type Data = {
@@ -19,5 +17,6 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const projects: Project[] = await client.fetch(query);
+
   res.status(200).json({ projects });
 }
