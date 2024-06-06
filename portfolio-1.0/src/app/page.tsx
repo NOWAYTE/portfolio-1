@@ -69,11 +69,11 @@ export default function Home() {
       </section>
 
       <section id="About" className="snap-center">
-        <About />
+        <About  pageInfo={ pageInfo }/>
       </section>
 
       <section id="Skills" className="snap-start">
-        <Skills />
+        <Skills skills = { skills }/>
       </section>
 
       <section id="Projects" className="snap-start">

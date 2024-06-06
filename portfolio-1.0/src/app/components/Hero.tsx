@@ -1,11 +1,11 @@
 "use client";
 import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import { motion } from 'framer-motion';
 import BackgroundCircle from './BackgroundCircle';
 import Link from 'next/link';
-import { PageInfo } from '../../../pages/api/typings';
 import { urlForImage } from '../../../sanity/lib/image';
+import { PageInfo } from '../../../pages/api/typings';
+
 
 type Props = {
   pageInfo: PageInfo;
@@ -14,7 +14,7 @@ type Props = {
 function Hero({ pageInfo }: Props) {
   const [text, count] = useTypewriter({
     words: [
-      `Hi, My name is ${pageInfo.name}`,
+      `Hi, My name is ${pageInfo?.name}`,
       "<Are-you-my-monster/>",
       "<Is-this-the-face-of-my-only-friend/>"
     ],
@@ -27,12 +27,12 @@ function Hero({ pageInfo }: Props) {
       <BackgroundCircle />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        // src={urlForImage(pageInfo.heroImage).url()} 
+        src={pageInfo?.heroImage?.asset.url}
         alt="profile picture"
       />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-4 tracking-[15px] font-semibold">
-          {pageInfo.role}
+          {pageInfo?.role}
         </h2>
         <h1 className="text-5xl font-semibold px-10">
           <span className="mr-3">{text}</span>

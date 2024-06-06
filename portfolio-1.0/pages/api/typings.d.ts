@@ -4,15 +4,6 @@ export interface SanityBody {
     _rev: string;
     _updatedAt: string;
   }
-
-  export interface Image {
-    url: string | undefined;
-    asset: {
-      _ref: string;
-      _type: string;
-      url: string;
-    };
-  }
   
   export interface PageInfo extends SanityBody {
     _type: "pageInfo";
@@ -20,11 +11,22 @@ export interface SanityBody {
     backgroundInformation: string;
     email: string;
     role: string;
-    heroImage: Image;
+    heroImage: {
+      asset: {
+        _id: string;
+        url: string;
+      };
+    };
     name: string;
     phoneNumber: string;
-    profilePic: Image;
+    profilePic: {
+      asset: {
+        _id: string;
+        url: string;
+      };
+    };
   }
+  
   
   export interface Technology extends SanityBody {
     _type: "skill";

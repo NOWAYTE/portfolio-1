@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import AnimatedLetters from './AnimatedLetters'
+import { PageInfo } from '../../../pages/api/typings'
+import { urlForImage } from '../../../sanity/lib/image'
 
-type Props = {}
+type Props = {
+  pageInfo: PageInfo
+}
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
 
   const [letterClass, setLetterClass] = useState('text-animate')
   const array = ['H', 'e', 'l', 'l', 'o', ' ', '<', 'F', 'r', 'i', 'e', 'n', 'd', '/', '>']
@@ -41,7 +45,7 @@ function About({}: Props) {
         opacity: 1, x: 0
       }}
       viewport={{once: true}}
-      src='./media/arcane.png'
+      src={pageInfo?.profilePic?.asset.url}
       className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
       md:rounded-lg md-w-64 md-h-96 xl:w-[500px] xl-h-[600px]'
       />
@@ -58,7 +62,7 @@ function About({}: Props) {
         opacity: 1
       }}
        className='text-base'>
-      I'm Daniel a software engineer currently enrolled at ALX and computer engineer, I am driven by a profound passion for technology and innovation. My expertise in IoT (Internet of Things) reflects my commitment to staying at the forefront of technological advancements. I thrive on challenges, viewing them as opportunities for personal and professional growth. My ultimate goal is to leverage my skills and knowledge to make a positive impact on the world through technology. With a steadfast dedication to learning and a desire to change lives, I am excited about the opportunities that lie ahead in creating innovative solutions that shape the future
+        <p className='text-base'>{pageInfo.backgroundInformation}</p>
       </motion.p>
         {/* <h4 className='text-4xl font-semibold'>
           Hello <span className='underline decoration-[#FZAB0A]/50'>Friend</span>
