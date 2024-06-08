@@ -5,7 +5,11 @@ import { client } from '../../sanity/lib/client';
 
 
 const query = groq`
-  *[_type == "skill"]
+*[_type == "skill"]{
+  title,
+  progress,
+  "imageUrl": image.asset->url
+}
 `;
 
 type Data = {

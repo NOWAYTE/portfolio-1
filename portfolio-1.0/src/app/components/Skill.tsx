@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Skill as ST } from '../../../pages/api/typings'
-import { urlForImage } from '../../../sanity/lib/image'
 
 type Props = {
   skill: ST;
@@ -17,7 +16,7 @@ function Skill({skill, directionLeft}: Props) {
         }}
         transition={{duration: 1}}
         whileInView={{opacity: 1, x: 0}}
-        src={urlForImage(skill?.image.url)}
+        src={skill.imageUrl}
         className='rounded-full border-gray-500 object-cover
         w-24 h-24 xl:w-32  md:w-28 md:h-28 xl:h-32 filter group-hover:grayscale transition
         duration-300 ease-in-out'

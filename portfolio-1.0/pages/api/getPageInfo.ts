@@ -6,8 +6,8 @@ import { PageInfo } from './typings.d';
 const query = groq`
 *[_type == "pageInfo"][0] {
   _id,
-  heroImage,
-  profilePic,
+  "heroImageUrl": heroImage.asset->url,
+  "profilePic": profilePic.asset->url,
   name,
   role,
   email,

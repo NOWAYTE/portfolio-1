@@ -3,7 +3,7 @@ import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircle from './BackgroundCircle';
 import Link from 'next/link';
-import { urlForImage } from '../../../sanity/lib/image';
+import { urlFor } from '../../../sanity/lib/image';
 import { PageInfo } from '../../../pages/api/typings';
 
 
@@ -27,7 +27,7 @@ function Hero({ pageInfo }: Props) {
       <BackgroundCircle />
       <img
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={pageInfo?.heroImage?.asset.url}
+        src={pageInfo.heroImageUrl}
         alt="profile picture"
       />
       <div className="z-20">

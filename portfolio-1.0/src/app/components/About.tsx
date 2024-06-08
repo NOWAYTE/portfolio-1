@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import AnimatedLetters from './AnimatedLetters'
 import { PageInfo } from '../../../pages/api/typings'
-import { urlForImage } from '../../../sanity/lib/image'
 
 type Props = {
   pageInfo: PageInfo
@@ -45,7 +44,7 @@ function About({pageInfo}: Props) {
         opacity: 1, x: 0
       }}
       viewport={{once: true}}
-      src={pageInfo?.profilePic?.asset.url}
+      src={pageInfo.profilePic}
       className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
       md:rounded-lg md-w-64 md-h-96 xl:w-[500px] xl-h-[600px]'
       />

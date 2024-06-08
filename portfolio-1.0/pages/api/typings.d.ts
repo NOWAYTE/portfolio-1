@@ -1,3 +1,5 @@
+import { Image } from "sanity";
+
 export interface SanityBody {
     _createdAt: string;
     _id: string;
@@ -12,21 +14,18 @@ export interface SanityBody {
     email: string;
     role: string;
     heroImage: {
-      asset: {
-        _id: string;
-        url: string;
-      };
+      asset: Image;
     };
     name: string;
     phoneNumber: string;
     profilePic: {
-      asset: {
-        _id: string;
-        url: string;
-      };
+      asset: Image;
     };
   }
-  
+
+  interface Image {
+    url: string;
+  }
   
   export interface Technology extends SanityBody {
     _type: "skill";
@@ -36,6 +35,7 @@ export interface SanityBody {
   }
   
   export interface Skill extends SanityBody {
+    imageUrl: string | undefined;
     _type: "skill";
     image: Image;
     progress: number;
