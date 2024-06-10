@@ -39,4 +39,32 @@
       transform: scale(1);
     }
   }
-  
+
+@font-face {
+  font-family: 'CoolveticaRg-Regular';
+  src: url('/public/fonts/CoolveticaRg-Regular.woff') format('woff'),
+       url('/public/fonts/CoolveticaRg-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'helvetica-neu';
+  src: url('/public/fonts/helvetica-neu.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LaBelleAurore';
+  src: url('/public/fonts/LaBelleAurore.woff') format('woff'),
+       url('/public/fonts/LaBelleAurore.woff2') format('woff2');
+}
+
+.font-coolvetica {
+  font-family: 'CoolveticaRg-Regular', sans-serif;
+}
+
+.font-helvetica {
+  font-family: 'helvetica-neu', sans-serif;
+}
+
+.font-labelleaurore {
+  font-family: 'LaBelleAurore', sans-serif;
+}

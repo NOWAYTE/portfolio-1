@@ -30,7 +30,7 @@ function Hero({ pageInfo }: Props) {
         src={pageInfo.heroImageUrl}
         alt="profile picture"
       />
-      <div className="z-20">
+      <div className="z-2">
         <h2 className="text-sm uppercase text-gray-500 pb-4 tracking-[15px] font-semibold">
           {pageInfo?.role}
         </h2>

@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       <section id="Projects" className="snap-start">
-        <Projects />
+        <Projects projects = { projects }/>
       </section>
 
       <section id="Contact" className="snap-start">

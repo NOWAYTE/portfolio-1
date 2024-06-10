@@ -4,18 +4,18 @@ import { client } from '../../sanity/lib/client';
 import { Project } from './typings';
 
 const query = groq`
-  *[_type == "project"]{
+*[_type == "project"]{
+  _id,
+  title,
+  "heroImage": heroImage.asset->url,
+  summary,
+  technologies[]->{
     _id,
     title,
-    heroImage,
-    summary,
-    technologies[]->{
-      _id,
-      title,
-      image
-    },
-    linkToBuild
-  }
+    "Image": image.asset->url
+  },
+  linkToBuild
+}
 `;
 
 type Data = {
@@ -30,8 +30,8 @@ export default async function handler(
     const projects: Project[] = await client.fetch(query);
     console.log('Fetched projects:', projects); 
     res.status(200).json({ projects });
-  } catch (error) {
-    console.error('Error fetching projects:', error);
+  } catch (lstatus) {
+    console.error('Error fetching projects:', lstatus );
     res.status(500).json({ projects: [] });
   }
 }
