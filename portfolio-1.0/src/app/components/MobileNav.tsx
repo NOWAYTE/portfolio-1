@@ -19,7 +19,7 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
         threshold: 0.8,
     });
 
-    const strArray = 'Hi\:\)'.split('');
+    const strArray = 'Hi'.split('');
 
     return (
         <AnimatePresence>
@@ -30,13 +30,13 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
                 transition={{ duration: 0.5 }}
             >
                 <button
-                    className='text-white text-xl top-4 right-0 p-8 flex absolute'
+                    className='text-white text-xl top-4 right-0 p-8 flex'
                     style={{ fontSize: '3.0rem' }}
                     onClick={() => setIsMenuOpen(false)}
                 >
                     &times;
                 </button>
-                <nav className='h-screen flex flex-col space-y-10 items-center justify-center relative'>
+                <nav className='h-screen flex flex-col space-y-10 items-center justify-center'>
                     <motion.h2
                         ref={ref}
                         initial={{ y: 50, opacity: 0 }}
@@ -45,17 +45,21 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
                         whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
                         className='absolute top-[240px] left-1/4 transform -translate-x-1/2 text-lg'
                     >
+                        <div className='text-4xl font-coolvetica font-thin tracking-[5px]'>
                         <AnimatedLetters letterClass='letter' strArray={strArray} idx={15} />
+                        <span className='text-9xl text-[#F7AB0A]'>.</span>
+                        </div>
+                        
                     </motion.h2>
                     <div
-                        className={`${pathname === '/' ? 'underline' : ''} text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] `}
+                        className={`${pathname === '/' ? '' : ''} text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] `}
                     >
                         <Link onClick={() => setIsMenuOpen(false)} href='#Hero'>
                             Home
                         </Link>
                     </div>
                     <div
-                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${pathname === '/' ? 'underline' : ''}`}
+                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${pathname === '/' ? '' : ''}`}
                     >
                         <Link onClick={() => setIsMenuOpen(false)} href='#About'>
                             About
@@ -63,14 +67,14 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
                     </div>
 
                     <div
-                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${pathname === '/' ? 'underline' : ''}`}
+                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${pathname === '/' ? '' : ''}`}
                     >
                         <Link onClick={() => setIsMenuOpen(false)} href='#Skills'>
                             Skills
                         </Link>
                     </div>
                     <div
-                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${usePathname() === '/' ? 'underline' : ''}`}
+                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${usePathname() === '/' ? '' : ''}`}
                     >
                         <Link onClick={() => setIsMenuOpen(false)} href='#Contact'>
                             Contact

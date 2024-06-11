@@ -28,7 +28,7 @@ function About({pageInfo}: Props) {
       whileInView={{
         x: 0,
       }}
-       className='absolute top-40 uppercase tracking-[20px] text-gray-500 text-xl'>About</motion.h3>
+       className='absolute top-[70px] uppercase tracking-[20px] text-gray-500 text-xl items-center  justify-center'>About</motion.h3>
 
       <motion.img
       initial={{
@@ -46,7 +46,7 @@ function About({pageInfo}: Props) {
       viewport={{once: true}}
       src={pageInfo.profilePic}
       className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
-      md:rounded-lg md-w-64 md-h-96 xl:w-[500px] xl-h-[600px]'
+      md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]'
       />
       <div className='space-y-10 px-0 md:px-10 '>
       <AnimatedLetters letterClass={`${letterClass} font-semibold text-5xl`} strArray={array} idx={15} />

@@ -20,23 +20,18 @@ function ContactMe({}: Props) {
     handleSubmit, 
     formState: { errors } 
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = formData =>
-    {
-      window.location.href = `mailto:danielkamaunganga3@gmail.com?subject=${formData.subject}&body=
-      ${formData.message}, (${formData.email})`
-    };
+  const onSubmit: SubmitHandler<Inputs> = formData => {
+    window.location.href = `mailto:danielkamaunganga3@gmail.com?subject=${formData.subject}&body=${formData.message}, (${formData.email})`;
+  };
 
   return (
     <div
-      className='h-screen flex relative flex-col text-center md:text-left
-      md:flex-row max-w-7xl px-10 justify-center mx-auto items-center'
+      className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center'
     >
-      <h3
-        className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'
-      >
-        Contact  Me
+      <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+        Contact
       </h3>
-      <div className='flex flex-col space-y-10'>
+      <div className='flex flex-col space-y-10 w-full items-center md:items-start md:w-auto'>
         <h4 className='text-5xl font-semibold text-center'>
           <AnimatedLetters
             letterClass='letter'
@@ -44,33 +39,35 @@ function ContactMe({}: Props) {
             idx={15}
           />
         </h4>
-        <div className='space-y-10'>
+        <div className='space-y-10 md:space-y-6 w-full md:flex md:flex-col md:items-start'>
           <div className='flex items-center space-x-5'>
             <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-            <p className='text-2xl'>+254 768533001</p>
+            <p className='text-2xl md:text-3xl'>+254 768533001</p>
           </div>
-          <div className='flex items-center space-x-5'>
-            <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-            <p className='text-2xl'>danielkamaunganga3@gmail.com</p>
-          </div>
-          <div className='flex items-center space-x-5'>
-            <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-            <p className='text-2xl'>5196-0200 Nairobi</p>
+          <div className='flex flex-col space-y-2'>
+            <div className='flex items-center space-x-5'>
+              <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
+              <p className='text-lg md:text-xl'>danielkamaunganga3@gmail.com</p>
+            </div>
+            <div className='flex items-center space-x-5'>
+              <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
+              <p className='text-lg md:text-xl'>5196-0200 Nairobi</p>
+            </div>
           </div>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
-          <div className='flex space-x-2'>
+        <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-full md:w-auto'>
+          <div className='flex flex-col md:flex-row md:space-x-2'>
             <input 
               {...register('name', { required: true })} 
               placeholder='Name' 
-              className='contactInput' 
+              className='contactInput w-full md:w-auto text-base' 
               type='text'
             />
             {errors.name && <span className="text-red-500">Name is required</span>}
             <input 
               {...register('email', { required: true })} 
               placeholder='Email' 
-              className='contactInput' 
+              className='contactInput w-full md:w-auto text-base' 
               type='text'
             />
             {errors.email && <span className="text-red-500">Email is required</span>}
@@ -78,14 +75,14 @@ function ContactMe({}: Props) {
           <input 
             {...register('subject', { required: true })} 
             placeholder='Subject' 
-            className='contactInput' 
+            className='contactInput w-full md:w-auto text-base' 
             type='text'
           />
           {errors.subject && <span className="text-red-500">Subject is required</span>}
           <textarea 
             {...register('message', { required: true })} 
             placeholder='Message' 
-            className='contactInput'
+            className='contactInput w-full md:w-auto text-base'
           ></textarea>
           {errors.message && <span className="text-red-500">Message is required</span>}
           <button 
