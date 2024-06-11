@@ -31,7 +31,7 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
             >
                 <button
                     className='text-white text-xl top-4 right-0 p-8 flex'
-                    style={{ fontSize: '3.0rem' }}
+                    style={{ fontSize: '2.0rem' }}
                     onClick={() => setIsMenuOpen(false)}
                 >
                     &times;
@@ -52,14 +52,14 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
                         
                     </motion.h2>
                     <div
-                        className={`${pathname === '/' ? '' : ''} text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] `}
+                        className={`${pathname === '/' ? '' : ''} text-lg font-bold font-coolvetica hover:text-[#F7AB0A] `}
                     >
                         <Link onClick={() => setIsMenuOpen(false)} href='#Hero'>
                             Home
                         </Link>
                     </div>
                     <div
-                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${pathname === '/' ? '' : ''}`}
+                        className={`text-lg font-bold font-coolvetica hover:text-[#F7AB0A] ${pathname === '/' ? '' : ''}`}
                     >
                         <Link onClick={() => setIsMenuOpen(false)} href='#About'>
                             About
@@ -67,14 +67,14 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
                     </div>
 
                     <div
-                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${pathname === '/' ? '' : ''}`}
+                        className={`text-lg font-bold font-coolvetica hover:text-[#F7AB0A] ${pathname === '/' ? '' : ''}`}
                     >
                         <Link onClick={() => setIsMenuOpen(false)} href='#Skills'>
                             Skills
                         </Link>
                     </div>
                     <div
-                        className={`text-3xl font-bold font-coolvetica hover:text-[#F7AB0A] ${usePathname() === '/' ? '' : ''}`}
+                        className={`text-lg font-bold font-coolvetica hover:text-[#F7AB0A] ${usePathname() === '/' ? '' : ''}`}
                     >
                         <Link onClick={() => setIsMenuOpen(false)} href='#Contact'>
                             Contact

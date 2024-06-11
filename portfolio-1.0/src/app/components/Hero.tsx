@@ -31,22 +31,22 @@ function Hero({ pageInfo }: Props) {
         alt="profile picture"
       />
       <div className="z-2">
-        <h2 className="text-sm uppercase text-gray-500 pb-4 tracking-[15px] font-semibold">
+        <h2 className=" text-sm uppercase text-gray-500 pb-4 tracking-[15px] font-semibold">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-5xl font-semibold px-10">
+        <h1 className="text-2xl md:text-5xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
         <div className="pt-5">
           <Link href="#About">
-            <button className="heroButton">About</button>
+            <button className="heroButton text-[8px] md:text-sm">About</button>
           </Link>
           <Link href="#Skills">
-            <button className="heroButton">Skills</button>
+            <button className="heroButton text-[8px] md:text-sm">Skills</button>
           </Link>
           <Link href="#Projects">
-            <button className="heroButton">Projects</button>
+            <button className="heroButton text-[8px] md:text-sm">Projects</button>
           </Link>
         </div>
       </div>

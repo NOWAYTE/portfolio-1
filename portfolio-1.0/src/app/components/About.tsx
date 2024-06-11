@@ -28,7 +28,7 @@ function About({pageInfo}: Props) {
       whileInView={{
         x: 0,
       }}
-       className='absolute top-[70px] uppercase tracking-[20px] text-gray-500 text-xl items-center  justify-center'>About</motion.h3>
+       className='absolute top-[70px] uppercase tracking-[20px] text-gray-500 md:text-xl items-center  justify-center'>About</motion.h3>
 
       <motion.img
       initial={{
@@ -49,7 +49,7 @@ function About({pageInfo}: Props) {
       md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]'
       />
       <div className='space-y-10 px-0 md:px-10 '>
-      <AnimatedLetters letterClass={`${letterClass} font-semibold text-5xl`} strArray={array} idx={15} />
+      <AnimatedLetters letterClass={`${letterClass} font-semibold md:text-5xl text-2xl`} strArray={array} idx={15} />
       <motion.p
       initial={{
         opacity: 0
@@ -60,7 +60,7 @@ function About({pageInfo}: Props) {
       whileInView={{
         opacity: 1
       }}
-       className='text-base'>
+       className='text-bas'>
         <p className='text-base'>{pageInfo.backgroundInformation}</p>
       </motion.p>
         {/* <h4 className='text-4xl font-semibold'>

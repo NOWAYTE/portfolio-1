@@ -28,30 +28,30 @@ function ContactMe({}: Props) {
     <div
       className='h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center'
     >
-      <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>
+      <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 md:text-2xl text-xl'>
         Contact
       </h3>
       <div className='flex flex-col space-y-10 w-full items-center md:items-start md:w-auto'>
-        <h4 className='text-5xl font-semibold text-center'>
+        <h4 className=' text-3xl md:text-5xl font-semibold text-center'>
           <AnimatedLetters
             letterClass='letter'
             strArray={strArray}
             idx={15}
           />
         </h4>
-        <div className='space-y-10 md:space-y-6 w-full md:flex md:flex-col md:items-start'>
+        <div className='space-y-7 md:space-y-6 w-full md:flex md:flex-col md:items-start'>
           <div className='flex items-center space-x-5'>
             <PhoneIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-            <p className='text-2xl md:text-3xl'>+254 768533001</p>
+            <p className='md:text-2xl'>+254 768533001</p>
           </div>
-          <div className='flex flex-col space-y-2'>
+          <div className='flex flex-col space-y-7'>
             <div className='flex items-center space-x-5'>
               <EnvelopeIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-              <p className='text-lg md:text-xl'>danielkamaunganga3@gmail.com</p>
+              <p className='md:text-2xl'>danielkamaunganga3@gmail.com</p>
             </div>
             <div className='flex items-center space-x-5'>
               <MapPinIcon className='text-[#F7AB0A] h-7 w-7 animate-pulse'/>
-              <p className='text-lg md:text-xl'>5196-0200 Nairobi</p>
+              <p className='md:text-2xl'>5196-0200 Nairobi</p>
             </div>
           </div>
         </div>
