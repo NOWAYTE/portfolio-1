@@ -53,7 +53,7 @@ export default function Home() {
   }
 
   return (
-    <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-center snap-mandatory overflow-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-1000 scrollbar-thumb-[#F7AB0A]/80">
+    <div className="bg-[#222831] text-white h-screen snap-y snap-center snap-mandatory overflow-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-1000 scrollbar-thumb-[#EF9C66]/20">
       <header>
         <title>My Portfolio</title>
       </header>

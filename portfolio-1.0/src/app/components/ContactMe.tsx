@@ -87,7 +87,7 @@ function ContactMe({}: Props) {
           {errors.message && <span className="text-red-500">Message is required</span>}
           <button 
             type='submit' 
-            className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold'
+            className='bg-[#61553a] py-5 px-10 rounded-md text-black font-bold border-b-[5px] border-yellow-500 hover:bg-[#F7AB0A]'
           >
             Submit
           </button>

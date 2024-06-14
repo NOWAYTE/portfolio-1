@@ -24,7 +24,7 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
     return (
         <AnimatePresence>
             <motion.div
-                className='fixed top-0 right-0 h-full w-3/4 bg-gray-800 text-white z-50 p-5'
+                className='fixed top-0 right-0 h-full w-3/4 bg-[#7a6b4a] text-white z-50 p-5'
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -47,7 +47,7 @@ const MobileNav: React.FC<Props> = ({ setIsMenuOpen }) => {
                     >
                         <div className='text-4xl font-coolvetica font-thin tracking-[5px]'>
                         <AnimatedLetters letterClass='letter' strArray={strArray} idx={15} />
-                        <span className='text-9xl text-[#F7AB0A]'>.</span>
+                        <span className='text-9xl text-black'>.</span>
                         </div>
                         
                     </motion.h2>
