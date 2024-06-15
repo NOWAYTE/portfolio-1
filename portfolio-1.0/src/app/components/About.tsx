@@ -32,7 +32,7 @@ function About({ pageInfo }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        src={pageInfo.profilePic}
+        src={pageInfo.profilePic as unknown as string}
         className='-mb-10 md:mb-0 flex-shrink-0 w-40 h-40 sm:w-56 sm:h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]'
       />
       <div className='space-y-6 sm:space-y-10 px-5 md:px-10'>

@@ -35,7 +35,7 @@ export default function Home() {
         setSkills(fetchedSkills);
         setProjects(fetchedProjects);
         setSocials(fetchedSocials);
-      } catch (err) {
+      } catch (err: any) {
         setError(err.message);
         console.error(err);
       }
@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <div className="bg-[#222831] text-white h-screen snap-y snap-center snap-mandatory overflow-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-1000 scrollbar-thumb-[#EF9C66]/20">
       <header>
-        <title>My Portfolio</title>
+        <title>Nowayte</title>
       </header>
 
       <BrowserRouter>

@@ -8,6 +8,7 @@ export interface SanityBody {
   }
   
   export interface PageInfo extends SanityBody {
+    [x: string]: string;
     _type: "pageInfo";
     address: string;
     backgroundInformation: string;
@@ -28,6 +29,7 @@ export interface SanityBody {
   }
   
   export interface Technology extends SanityBody {
+    [x: string]: string | undefined;
     _type: "skill";
     image: Image;
     progress: number;
@@ -43,6 +45,7 @@ export interface SanityBody {
   }
   
   export interface Project extends SanityBody {
+    [x: string]: string;
     title: string;
     _type: "project";
     image: Image;
