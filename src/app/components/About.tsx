@@ -22,7 +22,7 @@ function About({ pageInfo }: Props) {
         initial={{ x: 200 }}
         transition={{ duration: 1.2 }}
         whileInView={{ x: 0 }}
-        className='absolute top-[70px] uppercase tracking-[20px] text-gray-500 md:text-xl items-center justify-center'
+        className='absolute top-[70px] uppercase tracking-[20px] text-gray-500 text-xl md:text-md xl:text-lg'
       >
         About
       </motion.h3>
@@ -33,11 +33,11 @@ function About({ pageInfo }: Props) {
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         src={pageInfo.profilePic as unknown as string}
-        className='-mb-10 md:mb-0 flex-shrink-0 w-40 h-40 sm:w-56 sm:h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[600px]'
+        className='-mb-10 md:mb-0 flex-shrink-0 w-40 h-40 sm:w-56 sm:h-56 rounded-full object-cover md:rounded-lg md:w-48 md:h-72 xl:w-[430px] xl:h-[550px]'
       />
-      <div className='space-y-6 sm:space-y-10 px-5 md:px-10'>
+      <div className='space-y-6 sm:space-y-10 px-5 md:px-10 xl:space-y-6'>
         <AnimatedLetters
-          letterClass={`${letterClass} font-semibold text-xl sm:text-2xl md:text-5xl`}
+          letterClass={`${letterClass} font-semibold text-xl sm:text-2xl md:text-3xl xl:text-3xl`}
           strArray={array}
           idx={15}
         />
@@ -45,7 +45,7 @@ function About({ pageInfo }: Props) {
           initial={{ opacity: 0 }}
           transition={{ duration: 1 }}
           whileInView={{ opacity: 1 }}
-          className='text-sm sm:text-base md:text-lg'
+          className='text-sm sm:text-base md:text-sm xl:text-sm'
         >
           {pageInfo.backgroundInformation}
         </motion.p>
