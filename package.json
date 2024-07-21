@@ -37,7 +37,8 @@
     "sanity": "^3.44.0",
     "sheet": "^0.2.0",
     "styled-components": "^6.1.11",
-    "three": "^0.164.1"
+    "three": "^0.164.1",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@types/node": "^20.14.2",
