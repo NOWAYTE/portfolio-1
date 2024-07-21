@@ -15,6 +15,7 @@ import { fetchPageInfo } from "../../utils/fetchPageInfo";
 import { fetchSkills } from "../../utils/fetchSkills";
 import { fetchSocials } from "../../utils/fetchSocials";
 import { fetchProjects } from "../../utils/fetchProject";
+import { PropagateLoader  } from 'react-spinners';
 
 export default function Home() {
   const [pageInfo, setPageInfo] = useState<PageInfo | null>(null);
@@ -49,13 +50,15 @@ export default function Home() {
   }
 
   if (!pageInfo || !skills || !projects || !socials) {
-    return <div>Loading...</div>;
+    return <div className="flex items-center justify-center h-screen bg-[#222831]">
+    <PropagateLoader  color="#F7AB0A" />
+  </div>;
   }
 
   return (
     <div className="bg-[#222831] text-white h-screen snap-y snap-center snap-mandatory overflow-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-1000 scrollbar-thumb-[#EF9C66]/20">
       <header>
-        <title>Nowayte</title>
+        <title>NOWAYTE</title>
       </header>
 
       <BrowserRouter>
