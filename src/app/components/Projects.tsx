@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { Project } from '../../../pages/api/typings';
 
 type Props = {
@@ -8,8 +7,12 @@ type Props = {
 };
 
 function Projects({ projects }: Props) {
+  const handleTitleClick = (url: string) => {
+    window.open(url, '_blank');
+  };
+
   return (
-    <Link href="#Projects">
+    <div id="Projects">
       <motion.div
         initial={{ x: 200 }}
         transition={{ duration: 1.2 }}
@@ -31,13 +34,16 @@ function Projects({ projects }: Props) {
                 transition={{ duration: 1.2 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="w-56 h-48 md:w-52 md:h-44 xl:w-60 xl:h-52"
+                className="w-80 h-72 md:w-72 md:h-60 xl:w-96 xl:h-80"
                 src={project?.heroImage}
-                alt=""
+                alt={project.title}
               />
 
               <div className="space-y-3 px-0 md:px-5 xl:px-8 max-w-6xl">
-                <h4 className="text-lg md:text-2xl xl:text-3xl font-semibold text-center">
+                <h4
+                  onClick={() => handleTitleClick(project?.linkToBuild)}
+                  className="text-lg md:text-2xl xl:text-3xl font-semibold text-center cursor-pointer hover:underline"
+                >
                   <span className="underline decoration-[#F7AB0A]/50">
                     {project.title}
                   </span>
@@ -61,7 +67,7 @@ function Projects({ projects }: Props) {
         </div>
         <div className="w-full absolute top-[30%] bg-[#61553a] left-0 h-[500px] -skew-y-12"></div>
       </motion.div>
-    </Link>
+    </div>
   );
 }
 

@@ -14,7 +14,7 @@ type Inputs = {
 type Props = {};
 
 function ContactMe({}: Props) {
-  const strArray = "let's talk".split('');
+  const strArray = "Let's talk".split('');
   const { 
     register,
     handleSubmit, 
